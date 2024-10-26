@@ -13,12 +13,16 @@ func _process(delta: float) -> void:
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
+		print("move right")
 	if Input.is_action_pressed("move_left"):
 		velocity.x -= 1
+		print("move left")
 	if Input.is_action_pressed("move_down"):
 		velocity.y += 1
+		print("move down")
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
+		print("move up")
 
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
